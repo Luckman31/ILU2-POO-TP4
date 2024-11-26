@@ -12,6 +12,10 @@ public class Sanglier extends Produit {
 	}
 	@Override
 	public String decrireProduit() {
-		return nom+" de "+poids+" "+unite+" chassé par "+chasseur;
+		return nom+" de "+poids+" "+unite.KILOGRAMME+" chassï¿½ par "+chasseur.getNom();
+	}
+	@Override
+	public int calculerPrix(int prix) {
+		return (poids * prix) / 1000;
 	}
 }

@@ -9,7 +9,11 @@ public class Poisson extends Produit{
 	}
 	@Override
 	public String decrireProduit() {
-		return nom+" pêchés "+ date+".";
+		return nom+" pï¿½chï¿½s "+ date+".";
+	}
+	@Override
+	public int calculerPrix(int prix) {
+		return prix;
 	}
 
 }

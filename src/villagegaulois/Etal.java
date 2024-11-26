@@ -31,11 +31,8 @@ public class Etal <P extends IProduit> implements IEtal{
 	public void installerVendeur(Gaulois vendeur,P[] produit, int prix) {
 		this.vendeur=vendeur;
 		int i;
-		for(i=0;i<produit.length;i++) {
-			this.produit[i]=produit[i];
-			
-		}
-		this.nbProduit=i;
+		this.produit=produit;
+		this.nbProduit=produit.length;
 		this.prix=prix;
 		
 	}
@@ -59,9 +56,9 @@ public class Etal <P extends IProduit> implements IEtal{
 	/**
 	 * 
 	 * @return donneesVente est un tableau de chaine contenant [0] : un boolean
-	 *         indiquant si l'étal est occupé [1] : nom du vendeur [2] : produit
-	 *         vendu [2] : quantité de produit à vendre au début du marché [4] :
-	 *         quantité de produit vendu
+	 *         indiquant si l'ï¿½tal est occupï¿½ [1] : nom du vendeur [2] : produit
+	 *         vendu [2] : quantitï¿½ de produit ï¿½ vendre au dï¿½but du marchï¿½ [4] :
+	 *         quantitï¿½ de produit vendu
 	 */
 	@Override
 	public String etatEtal() {
@@ -73,7 +70,7 @@ public class Etal <P extends IProduit> implements IEtal{
 					chaine.append("\n- " + produit[i].decrireProduit());
 				}
 		} else {
-			chaine.append(" n'a plus rien à vendre.");
+			chaine.append(" n'a plus rien ï¿½ vendre.");
 		}
 		chaine.append("\n");
 		return chaine.toString();
